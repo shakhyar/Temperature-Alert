@@ -17,7 +17,6 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
 ## Demo Instructions:
 - live demo is hosted at https://hack230469.pythonanywhere.com/
 - after entering your information there, drag and drop the pin to the location you would like to monitor.
-
 - check your mail to see if you have entered your mail correctly
 - if not recieved any mail:
     - check your spams folder and mark our mail `as not spam`
