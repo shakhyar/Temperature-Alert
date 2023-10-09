@@ -15,7 +15,7 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
 
 
 ## Demo Instructions:
-- live demo is hosted at [https://](https://hack230469.pythonanywhere.com/)
+- live demo is hosted at https://hack230469.pythonanywhere.com/
 - 
 - after entering your information there, drag and drop the pin to the location you would like to monitor.
 
