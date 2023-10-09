@@ -1,7 +1,7 @@
 
 # Temparature Alert using Fetch.ai's uAgents for TechFest HackAI 2023-24
 
-Showcasing a simple yet powerful implementation of the `uAgents` library. Documentation and code is a little lengthy for a small problem statement, as a great man once said: **"a project should not be limited to a competition only, it should also be able to fit in real world scenario, this shows the perfection of the developer and his work"**, so the docs as well as the project became a little lengthy, but used the best tools to make the project more functional and better for actual day to day use. Hope you will like it.
+Showcasing a simple yet powerful implementation of the `uAgents` library. Documentation and code is a little lengthy for a small problem statement, as **"a project should not be limited to a competition only, it should also be able to fit in real world scenarios"**, so the docs as well as the project became a little lengthy, but used the best tools to make the project more functional and better for actual day to day use. Hope you will like it.
 
 # Project Highlights
 - Uses **Open Weather** to get Temperature
