@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+
+      <div class="text-center lg:w-2/3 w-full">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+              <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Registration Successfull for {{name}}</h1>
+        
+              <p class="sm:text-4xl text-xl font-medium title-font mb-2 text-white">Prefered Temperature range: {{mnt}}°C to {{mt}}°C</h1>
+        
+              
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">your given location is ({{lat}}, {{ln}})</p>
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">email/alerts will be sent on {{em}}</p>
+
+            </div>
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Service is running for you!</h1>
+        <p class="leading-relaxed mb-8">Check your Spam folder for confirmation mail, mark as not spam if not got the confirmation email yet. If testing is done, please close the service as this is a free server and will block the demo for exceeding the free limit</p>
+        <p class="leading-relaxed mb-8">If you entered the wrong mail then stop the service and register again.</p>
+
+
+
+        <div class="flex justify-center">
+
+          <a href="/e"><button class="inline-flex text-white bg-red-600 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Stop Service</button></a>
+          <a href="https://github.com/shakhyar/Temperature-Alert"><button class="ml-4 inline-flex text-gray-400 bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Github</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

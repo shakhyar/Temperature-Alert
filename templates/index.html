@@ -1,0 +1,116 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-gray-900 min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+    <header class="max-w-lg mx-auto">
+        <a href="#">
+            <h1 class="text-4xl font-bold text-white text-center">Temperature Alert System</h1>
+        </a>
+    </header>
+<main class="bg-black max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+    <section>
+        <h3 class="text-white font-bold text-2xl">for Techfest HackAI 2023</h3>
+        <h3 class="text-white font-bold text-2xl">Team ID: Hack-230469</h3>
+        <p class="text-gray-600 pt-2">This is a demo website, and is not for commercial use. Demo website is only to be used by Techfest Judges.</p>
+        <p class="text-red-600 pt-4">{{msg}}</p>
+    </section>
+
+    <section class="mt-10">
+        <form class="flex flex-col" method="POST">
+
+        	<p class="text-pink-300 pt-4">Don't worry, we won't use or publicise your name anywhere. See <a class="text-green-600 pt-4" href="/privacy">privacy options</a> for more info.</p>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Full Name</label>
+                <input type="text" name="name" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" value="{{
+          request.form.email}}" required>
+            </div>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+              <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Maximum Preferred Temperature</label>
+              <input type="number" name="maxt" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" value="{{
+        request.form.email}}" placeholder="In celcius" required>
+          </div>
+
+          <div class="mb-6 pt-3 rounded bg-gray-200">
+            <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Minimum Preferred Temperature</label>
+            <input type="number" name="mint" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" value="{{
+      request.form.email}}", placeholder="in celcius" required>
+        </div>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
+                <input type="email" name="email" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" value="{{
+          request.form.email}}" placeholder="for us to send email alerts!" required>
+            </div>
+
+            
+
+
+            <!-- Map container -->
+
+            <p class="text-pink-300 pt-4">Place the pin exactly at your location, we will get the coordinates of your location send alerts based on your dropped pin</p>
+    <div id="map"></div>
+    <p class="text-pink-300 pt-4">"https://www.freepnglogos.com/images/pin-21504.html" Get it on location pin connectsafely</p>
+    <div id="map"></div>
+
+        <input type="hidden" id="latitude" name="lat" placeholder="Latitude">
+        <input type="hidden" id="longitude" name="ln" placeholder="Longitude">
+   
+
+    <script>
+        // Function to update input fields with marker's coordinates
+        function updateCoordinates() {
+            var latLng = marker.getLatLng();
+            document.getElementById('latitude').value = latLng.lat.toFixed(6);
+            document.getElementById('longitude').value = latLng.lng.toFixed(6);
+        }
+
+        // Function to handle marker movement
+        function onMarkerDragEnd(event) {
+            updateCoordinates();
+        }
+
+        // Mumbai coordinates
+        var map = L.map('map').setView([19.0760, 72.8777], 11);
+
+        // Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Custom icon design for the marker (Red pin)
+        var redIcon = new L.Icon({
+            iconUrl: "{{url_for('static', filename='pin-21504.png')}}",
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+
+        // Add a marker to the map with the custom icon
+        var marker = L.marker([19.0760, 72.8777], { icon: redIcon, draggable: true }).addTo(map);
+        marker.on('dragend', onMarkerDragEnd);
+
+        // Initially update the input fields with the marker's coordinates
+        updateCoordinates();
+
+        // Calculate the bounding box for a 1 km radius around the marker
+        var radiusInMeters = 1000; // 1 km in meters
+        var circle = L.circle(marker.getLatLng(), radiusInMeters);
+        var bounds = circle.getBounds();
+
+        // Fit the map to the bounding box
+        map.fitBounds(bounds);
+    </script>
+   
+            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">Sign In</button>
+        </form>
+        
+    </section>
+</main>
+</div>
+
+{% endblock %}
