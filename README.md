@@ -15,7 +15,8 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
 
 
 ## Demo Instructions:
-- live demo is hosted at https://
+- live demo is hosted at [https://](https://hack230469.pythonanywhere.com/)
+- 
 - after entering your information there, drag and drop the pin to the location you would like to monitor.
 
 - check your mail to see if you have entered your mail correctly
@@ -23,6 +24,7 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
     - check your spams folder and mark our mail `as not spam`
     - your mail will be shown in the results page, check if spellings are correct
     - if incorrect email, click on `Stop Service` and register again
+    - if you still did not get email then run locally, the free resource might be used up and agents might be blocked by the free hosting provider `pythonanywhere`. Moreover the uAgent's documentation was not even sufficient to handle complicated errors. This should surely work locally on your machine.
 
 - the `agents` will check **every 60 seconds** the Temparature of your location using open weather. The API key in the demo server is mine, and hosting is free, so after testing, please consider clicking on the red button `Stop Service` as if the program exceeds the daily free quota, the demo would not work, and *judges would think its a program fault, resulting in my disqualification*
 
