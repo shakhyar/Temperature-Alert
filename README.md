@@ -16,10 +16,9 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
 
 ## Demo Instructions:
 - live demo is hosted at https://
-after entering your information there, drag and drop the pin to the location you would like to monitor.
-![Screenshot](img/3.png)
+- after entering your information there, drag and drop the pin to the location you would like to monitor.
 
-check your mail to see if you have entered your mail correctly
+- check your mail to see if you have entered your mail correctly
 - if not recieved any mail:
     - check your spams folder and mark our mail `as not spam`
     - your mail will be shown in the results page, check if spellings are correct
@@ -129,11 +128,8 @@ python agent_run.py
 **Solution?** *To trick the program*, try giving weird temperature range such as 0 to 10 degree and place the pin on mumbai, it will trigger the alert every 60 secods after that unless you close thes script
 
  
-
-
-
-
-## Screenshots
-
-![App Screenshot](img/2.png)
-
+*Code attributions:*
+- FetchAi uAgent documentaion
+- StackOverflow
+- Google Mail/Developer
+  
