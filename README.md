@@ -16,9 +16,10 @@ Showcasing a simple yet powerful implementation of the `uAgents` library. Docume
 
 ## Demo Instructions:
 - live demo is hosted at https://
-- after entering your information there, drag and drop the pin to the location you would like to monitor.
-![img](img/2.png)
-- check your mail to see if you have entered your mail correctly
+after entering your information there, drag and drop the pin to the location you would like to monitor.
+![Screenshot](img/2.png)
+
+check your mail to see if you have entered your mail correctly
 - if not recieved any mail:
     - check your spams folder and mark our mail `as not spam`
     - your mail will be shown in the results page, check if spellings are correct
