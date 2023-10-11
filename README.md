@@ -1,7 +1,7 @@
 
 # Temparature Alert using Fetch.ai's uAgents for TechFest HackAI 2023-24
 
-***NOTE: For some reason, github is not showing images. Please open the `flowchart.jpg` for the Flowchart and refer to `img/` directory for screenshots of the working app***
+***NOTE: For some reason, github html viewer is not showing my uploaded images. Please open the `flowchart.jpg` for the Flowchart and refer to `img/` directory for screenshots of the working app in your local machine***
 
 *Showcasing a simple yet powerful implementation of the `uAgents` library.*
 
